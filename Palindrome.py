@@ -1,11 +1,9 @@
 n=int(input())
-t=n
-c=0
-while n:
-    r=n % 10
-    c=c*10+r
-    n=n // 10
-if(c == t):
-    print("True")
+n=str(n)
+l=list(n)
+l.reverse()
+a=(''.join(l))
+if n==a:
+    print(True)
 else:
-    print("False")
+    print(False)
