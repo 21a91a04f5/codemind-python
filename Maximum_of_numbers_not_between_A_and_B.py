@@ -1,17 +1,11 @@
-int(input())
-arr=list(map(int,input().split()))
-l=[]
-k=[]
-c=0
-sum=0
+n=int(input())
+l=list(map(int,input().split()))
 a,b=map(int,input().split())
-for i in range(a,b+1):
-    l.append(i)
-for i in arr:
-    if i not in l:
-        k.append(i)
-        c+=1
-if c>0:
-    print(max(k))
+c=[]
+for i in l:
+    if (i<a or i>b ) and i not in c:
+        c.append(i)
+if len(c)>0:
+    print(max(c))
 else:
     print(-1)
